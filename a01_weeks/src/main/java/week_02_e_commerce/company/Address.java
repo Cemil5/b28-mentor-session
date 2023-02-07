@@ -1,6 +1,6 @@
 package week_02_e_commerce.company;
 
-public class Address {
+class Address {
 
     private String streetNumber;
     private String streetName;

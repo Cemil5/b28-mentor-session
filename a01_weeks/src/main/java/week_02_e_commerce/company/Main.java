@@ -18,7 +18,7 @@ import java.util.UUID;
 import static week_02_e_commerce.company.StaticConstants.DISCOUNT_LIST;
 import static week_02_e_commerce.company.StaticConstants.ORDER_LIST;
 
-public class Main {
+class Main {
 
     public static void main(String[] args)  {
 
