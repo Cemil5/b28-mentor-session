@@ -35,12 +35,10 @@ public class FirstNon_repeatingVowel {
                     if (str.charAt(i)==str.charAt(j)){
                         count++;
                     }
-
                 }
                 if(count == 1){
                     index = i;
                 }
-
             }
         }
         return index;

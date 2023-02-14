@@ -17,11 +17,14 @@ Example:
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 class Q1_NumberOfDuplicatedLetters {
 
-    public static int getNumber(String str) {
+    public static int getNumber5(String str) {
         String[] ch = str.toLowerCase().split("");
         String newString = "";
         for (String each : ch) {    //compare each
@@ -82,6 +85,15 @@ class Q1_NumberOfDuplicatedLetters {
             }
         }
         return output.length();
+    }
+
+    public static int getNumber(String str) {
+        return (int) str.toLowerCase().chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(Function.identity(), HashMap::new, Collectors.counting()))
+                .values().stream()
+                .filter(l -> l > 1)
+                .count();
     }
 
     public static void main(String[] args) {
